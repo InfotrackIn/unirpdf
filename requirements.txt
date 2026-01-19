@@ -3,3 +3,4 @@ uvicorn
 pypdf
 aiofiles
 python-multipart
+gunicorn
