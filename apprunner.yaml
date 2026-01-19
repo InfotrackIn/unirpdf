@@ -1,0 +1,20 @@
+# Versión de la especificación de App Runner
+version: 1.0
+
+# Define el entorno de ejecución (runtime)
+runtime: python3
+
+# Comandos para la fase de construcción (build)
+build:
+  commands:
+    # El comando predeterminado para Python es 'pip install -r requirements.txt',
+    # pero lo especificamos aquí para mayor claridad.
+    build: pip install -r requirements.txt
+
+# Comandos para la fase de ejecución (run)
+run:
+  # Comando para iniciar el servidor de la aplicación
+  command: uvicorn main:app --host 0.0.0.0 --port 8080
+  # El puerto en el que la aplicación estará escuchando
+  port: 8080
+
